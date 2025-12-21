@@ -48,4 +48,4 @@ saida: [ 1024, 2, 3, 4 ]
 isso nao pode:
 const array = [1, 2, 3, 4]
 array = 'Legal' // Assigment to constant variable
-*/
+*/ 
