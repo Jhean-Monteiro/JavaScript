@@ -1,6 +1,14 @@
-const fs = require('fs');
-const content = "const amogus = 'sus'; // ".repeat(800_000) + "\n".repeat(100);
+// bloat-monstro.js
+// Rode isso no node pra gerar um arquivo GIGANTE (ou só cole direto)
 
-for(let i = 1; i <= 50; i++){
-  fs.writeFileSync(`bloat${i}.js`, content + `// arquivo ${i} de 50`);
-}
+const fs = require('fs'); // se for gerar arquivo
+const base = "const sus = 'amogus is watching you'; // Jhean owns Python now 69420\n".repeat(25000);
+
+let conteudo = "// ARQUIVO GIGANTE - NÃO ABRA NO VS CODE NORMAL\n\n";
+conteudo += base.repeat(40); // ← aqui multiplica por 40 → ~3–5 MB
+
+// Se quiser salvar como arquivo (recomendo):
+// fs.writeFileSync('monstro.js', conteudo);
+
+// Senão só cole isso direto no seu repo:
+console.log("Bytes estimados:", conteudo.length);
